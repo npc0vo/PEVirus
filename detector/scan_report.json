@@ -1,0 +1,1083 @@
+{
+  "scan_date": "2026-01-01T22:55:06.681383",
+  "total_files": 4,
+  "infected_files": 3,
+  "clean_files": 1,
+  "reports": [
+    {
+      "filepath": "C:\\Users\\Administrator\\Desktop\\SoftSecExp\\PEVirus\\Tests\\hacker.dll",
+      "filename": "hacker.dll",
+      "filesize": 101376,
+      "md5": "0b7ae571ee0bcf96d9c26f72adb7df53",
+      "sha256": "dac022f893b9659a754a96b728f5c5ce45c55f25814c715d5401f96d0a2aa439",
+      "is_pe": true,
+      "is_infected": false,
+      "overall_severity": "clean",
+      "scan_time": "2026-01-01T22:55:06.290382",
+      "detections": [],
+      "pe_info": {
+        "machine": "0x8664",
+        "timestamp": "2026-01-01T21:56:33",
+        "subsystem": 2,
+        "dll": true,
+        "exe": false,
+        "entrypoint": "0x1464",
+        "imagebase": "0x180000000",
+        "sections": [
+          {
+            "name": ".text",
+            "virtual_address": "0x1000",
+            "virtual_size": 51008,
+            "raw_size": 51200,
+            "entropy": 6.422294006103932,
+            "characteristics": "0x60000020"
+          },
+          {
+            "name": ".rdata",
+            "virtual_address": "0xe000",
+            "virtual_size": 38446,
+            "raw_size": 38912,
+            "entropy": 4.635293187190854,
+            "characteristics": "0x40000040"
+          },
+          {
+            "name": ".data",
+            "virtual_address": "0x18000",
+            "virtual_size": 5480,
+            "raw_size": 3072,
+            "entropy": 1.8929802246243197,
+            "characteristics": "0xc0000040"
+          },
+          {
+            "name": ".pdata",
+            "virtual_address": "0x1a000",
+            "virtual_size": 3732,
+            "raw_size": 4096,
+            "entropy": 4.559205363157298,
+            "characteristics": "0x40000040"
+          },
+          {
+            "name": ".fptable",
+            "virtual_address": "0x1b000",
+            "virtual_size": 256,
+            "raw_size": 512,
+            "entropy": 0.0,
+            "characteristics": "0xc0000040"
+          },
+          {
+            "name": ".rsrc",
+            "virtual_address": "0x1c000",
+            "virtual_size": 480,
+            "raw_size": 512,
+            "entropy": 4.7176788329467545,
+            "characteristics": "0x40000040"
+          },
+          {
+            "name": ".reloc",
+            "virtual_address": "0x1d000",
+            "virtual_size": 1612,
+            "raw_size": 2048,
+            "entropy": 4.859209873794545,
+            "characteristics": "0x42000040"
+          }
+        ],
+        "imports": {
+          "KERNEL32.dll": [
+            "GetProcAddress",
+            "WriteConsoleW",
+            "CreateFileW",
+            "SetFilePointerEx",
+            "GetConsoleMode",
+            "GetConsoleOutputCP",
+            "FlushFileBuffers",
+            "SetStdHandle",
+            "WriteFile",
+            "CloseHandle",
+            "TerminateProcess",
+            "HeapReAlloc",
+            "HeapSize",
+            "GetStringTypeW",
+            "QueryPerformanceCounter",
+            "GetCurrentProcessId",
+            "GetCurrentThreadId",
+            "GetSystemTimeAsFileTime",
+            "InitializeSListHead",
+            "SetUnhandledExceptionFilter",
+            "GetStartupInfoW",
+            "GetModuleHandleW",
+            "RtlUnwindEx",
+            "InterlockedFlushSList",
+            "GetLastError",
+            "SetLastError",
+            "FlsAlloc",
+            "FlsGetValue",
+            "FlsSetValue",
+            "FlsFree",
+            "EnterCriticalSection",
+            "LeaveCriticalSection",
+            "InitializeCriticalSectionEx",
+            "DeleteCriticalSection",
+            "RtlLookupFunctionEntry",
+            "EncodePointer",
+            "RaiseException",
+            "RtlPcToFileHeader",
+            "GetCurrentProcess",
+            "ExitProcess",
+            "FreeLibrary",
+            "GetModuleHandleExW",
+            "GetModuleFileNameW",
+            "IsProcessorFeaturePresent",
+            "RtlCaptureContext",
+            "RtlVirtualUnwind",
+            "IsDebuggerPresent",
+            "UnhandledExceptionFilter",
+            "HeapAlloc",
+            "HeapFree",
+            "FindClose",
+            "FindFirstFileExW",
+            "FindNextFileW",
+            "IsValidCodePage",
+            "GetACP",
+            "GetOEMCP",
+            "GetCPInfo",
+            "GetCommandLineA",
+            "GetCommandLineW",
+            "MultiByteToWideChar",
+            "WideCharToMultiByte",
+            "GetEnvironmentStringsW",
+            "FreeEnvironmentStringsW",
+            "VirtualProtect",
+            "LoadLibraryExW",
+            "LCMapStringW",
+            "GetProcessHeap",
+            "GetStdHandle",
+            "GetFileType"
+          ],
+          "USER32.dll": [
+            "MessageBoxA"
+          ]
+        }
+      },
+      "heuristic_indicators": {
+        "file_entropy": 5.855182293409204,
+        "matched_signatures": [],
+        "shellcode_detected": false,
+        "suspicious_strings": []
+      }
+    },
+    {
+      "filepath": "C:\\Users\\Administrator\\Desktop\\SoftSecExp\\PEVirus\\Tests\\injector.exe",
+      "filename": "injector.exe",
+      "filesize": 273920,
+      "md5": "4a5e908dc2048a77c247e9f1ad02aea8",
+      "sha256": "a9cb9ca7451158bbd53e897793da3b8bd357c4b7838ca34704b87c78e97d88ba",
+      "is_pe": true,
+      "is_infected": true,
+      "overall_severity": "critical",
+      "scan_time": "2026-01-01T22:55:06.351560",
+      "detections": [
+        {
+          "method": "PE_Analysis",
+          "rule_name": "Suspicious_Section_.hacked",
+          "severity": "critical",
+          "description": "PEVirus infection marker: .hacked",
+          "matched_strings": [
+            ".hacked"
+          ],
+          "metadata": {
+            "section_info": {
+              "name": ".hacked",
+              "virtual_address": "0x48000",
+              "virtual_size": 4096,
+              "raw_size": 4096,
+              "entropy": 1.196823207118577,
+              "characteristics": "0xe0000020"
+            }
+          }
+        },
+        {
+          "method": "PE_Analysis",
+          "rule_name": "Suspicious_API_CreateRemoteThread",
+          "severity": "high",
+          "description": "Remote thread creation: KERNEL32.dll!CreateRemoteThread",
+          "matched_strings": [
+            "KERNEL32.dll!CreateRemoteThread"
+          ],
+          "metadata": {
+            "dll": "KERNEL32.dll",
+            "function": "CreateRemoteThread"
+          }
+        },
+        {
+          "method": "PE_Analysis",
+          "rule_name": "Suspicious_API_VirtualAllocEx",
+          "severity": "high",
+          "description": "Remote memory allocation: KERNEL32.dll!VirtualAllocEx",
+          "matched_strings": [
+            "KERNEL32.dll!VirtualAllocEx"
+          ],
+          "metadata": {
+            "dll": "KERNEL32.dll",
+            "function": "VirtualAllocEx"
+          }
+        },
+        {
+          "method": "PE_Analysis",
+          "rule_name": "Suspicious_API_WriteProcessMemory",
+          "severity": "high",
+          "description": "Process memory manipulation: KERNEL32.dll!WriteProcessMemory",
+          "matched_strings": [
+            "KERNEL32.dll!WriteProcessMemory"
+          ],
+          "metadata": {
+            "dll": "KERNEL32.dll",
+            "function": "WriteProcessMemory"
+          }
+        },
+        {
+          "method": "Heuristic",
+          "rule_name": "Signature_PEVirus_hacked_section_marker",
+          "severity": "critical",
+          "description": "PEVirus hacked section marker",
+          "matched_strings": [
+            ".hacked"
+          ],
+          "metadata": {}
+        },
+        {
+          "method": "Heuristic",
+          "rule_name": "Shellcode_Pattern",
+          "severity": "high",
+          "description": "Shellcode pattern detected in file",
+          "matched_strings": [
+            "415141505251564833d265488b5260"
+          ],
+          "metadata": {
+            "pattern": "415141505251564833d265488b5260"
+          }
+        },
+        {
+          "method": "Heuristic",
+          "rule_name": "Multiple_Suspicious_Strings",
+          "severity": "high",
+          "description": "Multiple suspicious strings found (3)",
+          "matched_strings": [
+            "CreateRemoteThread",
+            "WriteProcessMemory",
+            "VirtualAllocEx"
+          ],
+          "metadata": {}
+        }
+      ],
+      "pe_info": {
+        "machine": "0x8664",
+        "timestamp": "2026-01-01T21:52:06",
+        "subsystem": 3,
+        "dll": false,
+        "exe": true,
+        "entrypoint": "0x480cd",
+        "imagebase": "0x140000000",
+        "sections": [
+          {
+            "name": ".text",
+            "virtual_address": "0x1000",
+            "virtual_size": 172664,
+            "raw_size": 173056,
+            "entropy": 6.465807069291223,
+            "characteristics": "0x60000020"
+          },
+          {
+            "name": ".rdata",
+            "virtual_address": "0x2c000",
+            "virtual_size": 76646,
+            "raw_size": 76800,
+            "entropy": 5.107154083775407,
+            "characteristics": "0x40000040"
+          },
+          {
+            "name": ".data",
+            "virtual_address": "0x3f000",
+            "virtual_size": 9456,
+            "raw_size": 5120,
+            "entropy": 2.7482217638207325,
+            "characteristics": "0xc0000040"
+          },
+          {
+            "name": ".pdata",
+            "virtual_address": "0x42000",
+            "virtual_size": 9396,
+            "raw_size": 9728,
+            "entropy": 5.312395697635334,
+            "characteristics": "0x40000040"
+          },
+          {
+            "name": ".fptable",
+            "virtual_address": "0x45000",
+            "virtual_size": 256,
+            "raw_size": 512,
+            "entropy": 0.0,
+            "characteristics": "0xc0000040"
+          },
+          {
+            "name": ".rsrc",
+            "virtual_address": "0x46000",
+            "virtual_size": 480,
+            "raw_size": 512,
+            "entropy": 4.7098663329467545,
+            "characteristics": "0x40000040"
+          },
+          {
+            "name": ".reloc",
+            "virtual_address": "0x47000",
+            "virtual_size": 2484,
+            "raw_size": 2560,
+            "entropy": 5.378420805319424,
+            "characteristics": "0x42000040"
+          },
+          {
+            "name": ".hacked",
+            "virtual_address": "0x48000",
+            "virtual_size": 4096,
+            "raw_size": 4096,
+            "entropy": 1.196823207118577,
+            "characteristics": "0xe0000020"
+          },
+          {
+            "name": ".l2",
+            "virtual_address": "0x49000",
+            "virtual_size": 512,
+            "raw_size": 512,
+            "entropy": 4.7137725829467545,
+            "characteristics": "0x40000040"
+          }
+        ],
+        "imports": {
+          "KERNEL32.dll": [
+            "GetCurrentDirectoryA",
+            "GetFileAttributesA",
+            "CloseHandle",
+            "GetLastError",
+            "WaitForSingleObject",
+            "CreateRemoteThread",
+            "GetExitCodeThread",
+            "OpenProcess",
+            "VirtualAllocEx",
+            "WriteProcessMemory",
+            "VirtualFreeEx",
+            "GetModuleHandleA",
+            "GetProcAddress",
+            "CreateToolhelp32Snapshot",
+            "Process32FirstW",
+            "Process32NextW",
+            "WriteConsoleW",
+            "WideCharToMultiByte",
+            "EnterCriticalSection",
+            "LeaveCriticalSection",
+            "InitializeCriticalSectionEx",
+            "DeleteCriticalSection",
+            "EncodePointer",
+            "DecodePointer",
+            "MultiByteToWideChar",
+            "LCMapStringEx",
+            "GetStringTypeW",
+            "GetCPInfo",
+            "QueryPerformanceCounter",
+            "GetCurrentProcessId",
+            "GetCurrentThreadId",
+            "GetSystemTimeAsFileTime",
+            "InitializeSListHead",
+            "SetUnhandledExceptionFilter",
+            "GetStartupInfoW",
+            "GetModuleHandleW",
+            "RtlPcToFileHeader",
+            "RaiseException",
+            "RtlLookupFunctionEntry",
+            "RtlUnwindEx",
+            "SetLastError",
+            "FlsAlloc",
+            "FlsGetValue",
+            "FlsSetValue",
+            "FlsFree",
+            "IsProcessorFeaturePresent",
+            "GetStdHandle",
+            "WriteFile",
+            "GetModuleFileNameW",
+            "GetCurrentProcess",
+            "ExitProcess",
+            "TerminateProcess",
+            "FreeLibrary",
+            "GetModuleHandleExW",
+            "GetCommandLineA",
+            "GetCommandLineW",
+            "RtlCaptureContext",
+            "RtlVirtualUnwind",
+            "IsDebuggerPresent",
+            "UnhandledExceptionFilter",
+            "HeapAlloc",
+            "HeapFree",
+            "GetFileType",
+            "VirtualProtect",
+            "LoadLibraryExW",
+            "CompareStringW",
+            "LCMapStringW",
+            "GetLocaleInfoW",
+            "IsValidLocale",
+            "GetUserDefaultLCID",
+            "EnumSystemLocalesW",
+            "FlushFileBuffers",
+            "GetConsoleOutputCP",
+            "GetConsoleMode",
+            "ReadFile",
+            "GetFileSizeEx",
+            "SetFilePointerEx",
+            "ReadConsoleW",
+            "HeapReAlloc",
+            "FindClose",
+            "FindFirstFileExW",
+            "FindNextFileW",
+            "IsValidCodePage",
+            "GetACP",
+            "GetOEMCP",
+            "GetEnvironmentStringsW",
+            "FreeEnvironmentStringsW",
+            "SetEnvironmentVariableW",
+            "SetStdHandle",
+            "GetProcessHeap",
+            "HeapSize",
+            "CreateFileW",
+            "RtlUnwind"
+          ]
+        }
+      },
+      "heuristic_indicators": {
+        "file_entropy": 6.227061379625831,
+        "matched_signatures": [
+          "PEVirus hacked section marker"
+        ],
+        "shellcode_detected": true,
+        "suspicious_strings": [
+          "CreateRemoteThread",
+          "WriteProcessMemory",
+          "VirtualAllocEx"
+        ]
+      }
+    },
+    {
+      "filepath": "C:\\Users\\Administrator\\Desktop\\SoftSecExp\\PEVirus\\Tests\\PEVirus.exe",
+      "filename": "PEVirus.exe",
+      "filesize": 2033152,
+      "md5": "3f674d4dc4bdab860c4af3a70761c88e",
+      "sha256": "d54ded8d93a8205d38a9ffe07ad4b37deb0ba9e8cdde7b424db7f2c28ed9b8b1",
+      "is_pe": true,
+      "is_infected": true,
+      "overall_severity": "critical",
+      "scan_time": "2026-01-01T22:55:06.642383",
+      "detections": [
+        {
+          "method": "Heuristic",
+          "rule_name": "Signature_PEVirus_hacked_section_marker",
+          "severity": "critical",
+          "description": "PEVirus hacked section marker",
+          "matched_strings": [
+            ".hacked"
+          ],
+          "metadata": {}
+        },
+        {
+          "method": "Heuristic",
+          "rule_name": "Signature_PEVirus_mutex_name",
+          "severity": "critical",
+          "description": "PEVirus mutex name",
+          "matched_strings": [
+            "PEVirus_Mutex"
+          ],
+          "metadata": {}
+        },
+        {
+          "method": "Heuristic",
+          "rule_name": "Signature_PEVirus_specific_mutex",
+          "severity": "critical",
+          "description": "PEVirus specific mutex",
+          "matched_strings": [
+            "Global\\PEVirus_Mutex_npc0vo"
+          ],
+          "metadata": {}
+        },
+        {
+          "method": "Heuristic",
+          "rule_name": "Signature_PEVirus_persistence_filename",
+          "severity": "high",
+          "description": "PEVirus persistence filename",
+          "matched_strings": [
+            "SystemUpdate.exe"
+          ],
+          "metadata": {}
+        },
+        {
+          "method": "Heuristic",
+          "rule_name": "Signature_PEVirus_backup_filename",
+          "severity": "high",
+          "description": "PEVirus backup filename",
+          "matched_strings": [
+            "svchost_backup.exe"
+          ],
+          "metadata": {}
+        },
+        {
+          "method": "Heuristic",
+          "rule_name": "Signature_PEVirus_daemon_indicator",
+          "severity": "high",
+          "description": "PEVirus daemon indicator",
+          "matched_strings": [
+            "Daemon thread"
+          ],
+          "metadata": {}
+        },
+        {
+          "method": "Heuristic",
+          "rule_name": "Signature_PEVirus_daemon_indicator",
+          "severity": "high",
+          "description": "PEVirus daemon indicator",
+          "matched_strings": [
+            "Background daemon"
+          ],
+          "metadata": {}
+        },
+        {
+          "method": "Heuristic",
+          "rule_name": "Signature_PEVirus_persistence_repair",
+          "severity": "high",
+          "description": "PEVirus persistence repair",
+          "matched_strings": [
+            "Persistence lost"
+          ],
+          "metadata": {}
+        },
+        {
+          "method": "Heuristic",
+          "rule_name": "Signature_PEVirus_persistence_repair",
+          "severity": "high",
+          "description": "PEVirus persistence repair",
+          "matched_strings": [
+            "Repairing persistence"
+          ],
+          "metadata": {}
+        },
+        {
+          "method": "Heuristic",
+          "rule_name": "Signature_PEVirus_infection_message",
+          "severity": "critical",
+          "description": "PEVirus infection message",
+          "matched_strings": [
+            "Infection Successful"
+          ],
+          "metadata": {}
+        },
+        {
+          "method": "Heuristic",
+          "rule_name": "Signature_PEVirus_infection_counter",
+          "severity": "critical",
+          "description": "PEVirus infection counter",
+          "matched_strings": [
+            "Total files infected"
+          ],
+          "metadata": {}
+        },
+        {
+          "method": "Heuristic",
+          "rule_name": "Signature_PEVirus_infection_check",
+          "severity": "high",
+          "description": "PEVirus infection check",
+          "matched_strings": [
+            "File already infected"
+          ],
+          "metadata": {}
+        },
+        {
+          "method": "Heuristic",
+          "rule_name": "Shellcode_Pattern",
+          "severity": "high",
+          "description": "Shellcode pattern detected in file",
+          "matched_strings": [
+            "415141505251564833d265488b5260"
+          ],
+          "metadata": {
+            "pattern": "415141505251564833d265488b5260"
+          }
+        },
+        {
+          "method": "Heuristic",
+          "rule_name": "Multiple_Suspicious_Strings",
+          "severity": "high",
+          "description": "Multiple suspicious strings found (4)",
+          "matched_strings": [
+            "Software\\Microsoft\\Windows\\CurrentVersion\\Run",
+            "CreateRemoteThread",
+            "WriteProcessMemory",
+            "VirtualAllocEx"
+          ],
+          "metadata": {}
+        }
+      ],
+      "pe_info": {
+        "machine": "0x8664",
+        "timestamp": "2026-01-01T21:56:38",
+        "subsystem": 3,
+        "dll": false,
+        "exe": true,
+        "entrypoint": "0xf8850",
+        "imagebase": "0x140000000",
+        "sections": [
+          {
+            "name": ".text",
+            "virtual_address": "0x1000",
+            "virtual_size": 1234548,
+            "raw_size": 1234944,
+            "entropy": 6.417633079546682,
+            "characteristics": "0x60000020"
+          },
+          {
+            "name": ".rdata",
+            "virtual_address": "0x12f000",
+            "virtual_size": 721028,
+            "raw_size": 721408,
+            "entropy": 5.861930275782309,
+            "characteristics": "0x40000040"
+          },
+          {
+            "name": ".data",
+            "virtual_address": "0x1e0000",
+            "virtual_size": 39024,
+            "raw_size": 22528,
+            "entropy": 4.1580877560708585,
+            "characteristics": "0xc0000040"
+          },
+          {
+            "name": ".pdata",
+            "virtual_address": "0x1ea000",
+            "virtual_size": 40656,
+            "raw_size": 40960,
+            "entropy": 6.029153680012781,
+            "characteristics": "0x40000040"
+          },
+          {
+            "name": ".fptable",
+            "virtual_address": "0x1f4000",
+            "virtual_size": 256,
+            "raw_size": 512,
+            "entropy": 0.0,
+            "characteristics": "0xc0000040"
+          },
+          {
+            "name": ".rsrc",
+            "virtual_address": "0x1f5000",
+            "virtual_size": 480,
+            "raw_size": 512,
+            "entropy": 4.7122981932940915,
+            "characteristics": "0x40000040"
+          },
+          {
+            "name": ".reloc",
+            "virtual_address": "0x1f6000",
+            "virtual_size": 10920,
+            "raw_size": 11264,
+            "entropy": 5.408189001078376,
+            "characteristics": "0x42000040"
+          }
+        ],
+        "imports": {
+          "WS2_32.dll": [
+            "connect",
+            "ioctlsocket",
+            "htons",
+            "inet_pton",
+            "WSACleanup",
+            "WSAStartup",
+            "socket",
+            "send",
+            "recv",
+            "closesocket"
+          ],
+          "KERNEL32.dll": [
+            "FreeEnvironmentStringsW",
+            "GetEnvironmentStringsW",
+            "GetOEMCP",
+            "GetACP",
+            "IsValidCodePage",
+            "FindFirstFileExW",
+            "HeapReAlloc",
+            "GetCurrentDirectoryA",
+            "FindClose",
+            "FindFirstFileA",
+            "FindNextFileA",
+            "GetFileAttributesA",
+            "SetFileAttributesA",
+            "GetTempPathA",
+            "CloseHandle",
+            "GetLastError",
+            "CreateMutexA",
+            "CreateThread",
+            "GetModuleFileNameA",
+            "CopyFileA",
+            "GetConsoleWindow",
+            "MoveFileA",
+            "ReadFile",
+            "WriteFile",
+            "SetEnvironmentVariableW",
+            "CreatePipe",
+            "PeekNamedPipe",
+            "Sleep",
+            "TerminateProcess",
+            "GetExitCodeProcess",
+            "CreateProcessA",
+            "FindNextFileW",
+            "MultiByteToWideChar",
+            "WideCharToMultiByte",
+            "GetSystemTimeAsFileTime",
+            "FlushFileBuffers",
+            "GetCurrentProcessId",
+            "GetCurrentThreadId",
+            "GetDynamicTimeZoneInformation",
+            "GetStdHandle",
+            "GetConsoleMode",
+            "WriteConsoleA",
+            "GetConsoleScreenBufferInfo",
+            "SetConsoleTextAttribute",
+            "WriteConsoleW",
+            "GetProcessHeap",
+            "HeapSize",
+            "SetEndOfFile",
+            "SetHandleInformation",
+            "QueryPerformanceCounter",
+            "QueryPerformanceFrequency",
+            "GetSystemTimePreciseAsFileTime",
+            "WaitForSingleObjectEx",
+            "GetExitCodeThread",
+            "ReleaseSRWLockExclusive",
+            "AcquireSRWLockExclusive",
+            "TryAcquireSRWLockExclusive",
+            "SleepConditionVariableSRW",
+            "WakeConditionVariable",
+            "WakeAllConditionVariable",
+            "EnterCriticalSection",
+            "LeaveCriticalSection",
+            "InitializeCriticalSectionEx",
+            "DeleteCriticalSection",
+            "RtlUnwind",
+            "EncodePointer",
+            "DecodePointer",
+            "LCMapStringEx",
+            "GetStringTypeW",
+            "GetCPInfo",
+            "InitializeSListHead",
+            "SetUnhandledExceptionFilter",
+            "GetStartupInfoW",
+            "GetModuleHandleW",
+            "RtlPcToFileHeader",
+            "RaiseException",
+            "RtlLookupFunctionEntry",
+            "RtlUnwindEx",
+            "SetLastError",
+            "FlsAlloc",
+            "FlsGetValue",
+            "FlsSetValue",
+            "FlsFree",
+            "ExitThread",
+            "FreeLibrary",
+            "FreeLibraryAndExitThread",
+            "GetModuleHandleExW",
+            "IsProcessorFeaturePresent",
+            "CreateFileW",
+            "GetFileType",
+            "SetStdHandle",
+            "GetModuleFileNameW",
+            "GetCurrentProcess",
+            "ExitProcess",
+            "GetProcAddress",
+            "GetCommandLineA",
+            "GetCommandLineW",
+            "RtlCaptureContext",
+            "RtlVirtualUnwind",
+            "IsDebuggerPresent",
+            "UnhandledExceptionFilter",
+            "HeapAlloc",
+            "HeapFree",
+            "VirtualProtect",
+            "LoadLibraryExW",
+            "GetDateFormatW",
+            "GetTimeFormatW",
+            "CompareStringW",
+            "LCMapStringW",
+            "GetLocaleInfoW",
+            "IsValidLocale",
+            "GetUserDefaultLCID",
+            "EnumSystemLocalesW",
+            "GetConsoleOutputCP",
+            "GetFileSizeEx",
+            "SetFilePointerEx",
+            "ReadConsoleW",
+            "GetTimeZoneInformation"
+          ],
+          "USER32.dll": [
+            "ShowWindow"
+          ],
+          "SHELL32.dll": [
+            "SHGetFolderPathA"
+          ],
+          "ADVAPI32.dll": [
+            "RegQueryValueExA",
+            "RegOpenKeyExA",
+            "RegCloseKey",
+            "RegSetValueExA"
+          ]
+        }
+      },
+      "heuristic_indicators": {
+        "file_entropy": 6.530731755738806,
+        "matched_signatures": [
+          "PEVirus hacked section marker",
+          "PEVirus mutex name",
+          "PEVirus specific mutex",
+          "PEVirus persistence filename",
+          "PEVirus backup filename",
+          "PEVirus daemon indicator",
+          "PEVirus daemon indicator",
+          "PEVirus persistence repair",
+          "PEVirus persistence repair",
+          "PEVirus infection message",
+          "PEVirus infection counter",
+          "PEVirus infection check"
+        ],
+        "shellcode_detected": true,
+        "suspicious_strings": [
+          "Software\\Microsoft\\Windows\\CurrentVersion\\Run",
+          "CreateRemoteThread",
+          "WriteProcessMemory",
+          "VirtualAllocEx"
+        ]
+      }
+    },
+    {
+      "filepath": "C:\\Users\\Administrator\\Desktop\\SoftSecExp\\PEVirus\\Tests\\Victim.exe",
+      "filename": "Victim.exe",
+      "filesize": 110592,
+      "md5": "e7e3a2b476efbe0bc6299ffa35a42763",
+      "sha256": "8bca246468fd6ef97626ff6d78be7b1ecba7bee6c7ee62610be1bb42ac3c0a6e",
+      "is_pe": true,
+      "is_infected": true,
+      "overall_severity": "critical",
+      "scan_time": "2026-01-01T22:55:06.677384",
+      "detections": [
+        {
+          "method": "PE_Analysis",
+          "rule_name": "Suspicious_Section_.hacked",
+          "severity": "critical",
+          "description": "PEVirus infection marker: .hacked",
+          "matched_strings": [
+            ".hacked"
+          ],
+          "metadata": {
+            "section_info": {
+              "name": ".hacked",
+              "virtual_address": "0x1f000",
+              "virtual_size": 4096,
+              "raw_size": 4096,
+              "entropy": 1.1965350770083314,
+              "characteristics": "0xe0000020"
+            }
+          }
+        },
+        {
+          "method": "Heuristic",
+          "rule_name": "Signature_PEVirus_hacked_section_marker",
+          "severity": "critical",
+          "description": "PEVirus hacked section marker",
+          "matched_strings": [
+            ".hacked"
+          ],
+          "metadata": {}
+        },
+        {
+          "method": "Heuristic",
+          "rule_name": "Shellcode_Pattern",
+          "severity": "high",
+          "description": "Shellcode pattern detected in file",
+          "matched_strings": [
+            "415141505251564833d265488b5260"
+          ],
+          "metadata": {
+            "pattern": "415141505251564833d265488b5260"
+          }
+        }
+      ],
+      "pe_info": {
+        "machine": "0x8664",
+        "timestamp": "2026-01-01T21:52:04",
+        "subsystem": 3,
+        "dll": false,
+        "exe": true,
+        "entrypoint": "0x1f0cd",
+        "imagebase": "0x140000000",
+        "sections": [
+          {
+            "name": ".text",
+            "virtual_address": "0x1000",
+            "virtual_size": 55648,
+            "raw_size": 55808,
+            "entropy": 6.43001360659403,
+            "characteristics": "0x60000020"
+          },
+          {
+            "name": ".rdata",
+            "virtual_address": "0xf000",
+            "virtual_size": 38658,
+            "raw_size": 38912,
+            "entropy": 4.689480978273433,
+            "characteristics": "0x40000040"
+          },
+          {
+            "name": ".data",
+            "virtual_address": "0x19000",
+            "virtual_size": 5568,
+            "raw_size": 3072,
+            "entropy": 1.8960461797562052,
+            "characteristics": "0xc0000040"
+          },
+          {
+            "name": ".pdata",
+            "virtual_address": "0x1b000",
+            "virtual_size": 3828,
+            "raw_size": 4096,
+            "entropy": 4.659573993960589,
+            "characteristics": "0x40000040"
+          },
+          {
+            "name": ".fptable",
+            "virtual_address": "0x1c000",
+            "virtual_size": 256,
+            "raw_size": 512,
+            "entropy": 0.0,
+            "characteristics": "0xc0000040"
+          },
+          {
+            "name": ".rsrc",
+            "virtual_address": "0x1d000",
+            "virtual_size": 480,
+            "raw_size": 512,
+            "entropy": 4.710061382693063,
+            "characteristics": "0x40000040"
+          },
+          {
+            "name": ".reloc",
+            "virtual_address": "0x1e000",
+            "virtual_size": 1620,
+            "raw_size": 2048,
+            "entropy": 4.85691428336021,
+            "characteristics": "0x42000040"
+          },
+          {
+            "name": ".hacked",
+            "virtual_address": "0x1f000",
+            "virtual_size": 4096,
+            "raw_size": 4096,
+            "entropy": 1.1965350770083314,
+            "characteristics": "0xe0000020"
+          },
+          {
+            "name": ".l2",
+            "virtual_address": "0x20000",
+            "virtual_size": 512,
+            "raw_size": 512,
+            "entropy": 4.701503258251789,
+            "characteristics": "0x40000040"
+          }
+        ],
+        "imports": {
+          "USER32.dll": [
+            "MessageBoxA"
+          ],
+          "KERNEL32.dll": [
+            "HeapAlloc",
+            "WriteConsoleW",
+            "QueryPerformanceCounter",
+            "GetCurrentProcessId",
+            "GetCurrentThreadId",
+            "GetSystemTimeAsFileTime",
+            "InitializeSListHead",
+            "SetUnhandledExceptionFilter",
+            "GetStartupInfoW",
+            "GetModuleHandleW",
+            "RtlUnwindEx",
+            "GetLastError",
+            "SetLastError",
+            "FlsAlloc",
+            "FlsGetValue",
+            "FlsSetValue",
+            "FlsFree",
+            "EnterCriticalSection",
+            "LeaveCriticalSection",
+            "InitializeCriticalSectionEx",
+            "DeleteCriticalSection",
+            "RtlLookupFunctionEntry",
+            "EncodePointer",
+            "RaiseException",
+            "RtlPcToFileHeader",
+            "GetStdHandle",
+            "WriteFile",
+            "GetModuleFileNameW",
+            "GetCurrentProcess",
+            "ExitProcess",
+            "TerminateProcess",
+            "FreeLibrary",
+            "GetModuleHandleExW",
+            "GetProcAddress",
+            "GetCommandLineA",
+            "GetCommandLineW",
+            "IsProcessorFeaturePresent",
+            "RtlCaptureContext",
+            "RtlVirtualUnwind",
+            "IsDebuggerPresent",
+            "UnhandledExceptionFilter",
+            "HeapFree",
+            "FindClose",
+            "FindFirstFileExW",
+            "FindNextFileW",
+            "IsValidCodePage",
+            "GetACP",
+            "GetOEMCP",
+            "GetCPInfo",
+            "MultiByteToWideChar",
+            "WideCharToMultiByte",
+            "GetEnvironmentStringsW",
+            "FreeEnvironmentStringsW",
+            "SetEnvironmentVariableW",
+            "SetStdHandle",
+            "GetFileType",
+            "GetStringTypeW",
+            "VirtualProtect",
+            "LoadLibraryExW",
+            "CompareStringW",
+            "LCMapStringW",
+            "GetProcessHeap",
+            "HeapSize",
+            "HeapReAlloc",
+            "FlushFileBuffers",
+            "GetConsoleOutputCP",
+            "GetConsoleMode",
+            "SetFilePointerEx",
+            "CreateFileW",
+            "CloseHandle"
+          ]
+        }
+      },
+      "heuristic_indicators": {
+        "file_entropy": 5.791792543953676,
+        "matched_signatures": [
+          "PEVirus hacked section marker"
+        ],
+        "shellcode_detected": true,
+        "suspicious_strings": []
+      }
+    }
+  ]
+}
